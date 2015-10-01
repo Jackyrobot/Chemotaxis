@@ -1,8 +1,24 @@
+import processing.core.*; 
+import processing.data.*; 
+import processing.event.*; 
+import processing.opengl.*; 
+
+import java.util.HashMap; 
+import java.util.ArrayList; 
+import java.io.File; 
+import java.io.BufferedReader; 
+import java.io.PrintWriter; 
+import java.io.InputStream; 
+import java.io.OutputStream; 
+import java.io.IOException; 
+
+public class Chemotaxis extends PApplet {
+
 PImage img;
 Bacteria [] dots;
 Trump hunter;
 
-void setup(){
+public void setup(){
 	size(600,600);
 	background(0);
 	img = loadImage("donaldtramp.PNG");
@@ -14,7 +30,7 @@ void setup(){
 	}
 	hunter = new Trump();
 }
-void draw(){
+public void draw(){
 
 	fill(0);
 	rect(-50,-50, 650,650);
@@ -26,7 +42,7 @@ void draw(){
 	}
 }
 
-void mousePressed()
+public void mousePressed()
 {
 	setup();
 }
@@ -41,12 +57,12 @@ class Bacteria
 		y = (int)(Math.random()*600);
 		alive = true;
 	}
-	void move()
+	public void move()
 	{
 		x = x + (int)(Math.random()*3)-1;
 		y = y + (int)(Math.random()*3)-1;
 	}
-	void show()
+	public void show()
 	{
 		noStroke();
 		fill(255,200,0);
@@ -67,9 +83,18 @@ class Trump
 		x = mouseX;
 		y = mouseY;
 	}
-	void show()
+	public void show()
 	{	
 		fill(255);
 		image(img, mouseX-img.width/2, mouseY-img.height/2);
 	}
+}
+  static public void main(String[] passedArgs) {
+    String[] appletArgs = new String[] { "Chemotaxis" };
+    if (passedArgs != null) {
+      PApplet.main(concat(appletArgs, passedArgs));
+    } else {
+      PApplet.main(appletArgs);
+    }
+  }
 }
