@@ -1,6 +1,6 @@
 void setup() { 
   size(600, 800); 
-  frameRate(25);
+  frameRate(30);
 } 
 PImage c=loadImage("http://i.imgur.com/cXaR0vS.png"),b=loadImage("http://i.imgur.com/4vQhsKk.png");
 PImage w=loadImage("http://i.imgur.com/4SUsUuc.png"),m=loadImage("http://i.imgur.com/U6KEwxe.png");
