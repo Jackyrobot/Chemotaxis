@@ -2,7 +2,7 @@ void setup() {
   size(600, 800); 
   frameRate(30);
 } 
-PImage c=loadImage("http://i.imgur.com/cXaR0vS.png"),b=loadImage("http://i.imgur.com/4vQhsKk.png");
+PImage c=loadImage("http://i.imgur.com/cXaR0vS.png"),b=loadImage("http://i.imgur.com/sWXbAWZ.png");
 PImage w=loadImage("http://i.imgur.com/4SUsUuc.png"),m=loadImage("http://i.imgur.com/U6KEwxe.png");
 int r,s=0,d=1,x,y=400,vy,wx[]={0,0},wy[]={0,0},e=1800,l=600,hs=0,v=800;
 void draw() { 
